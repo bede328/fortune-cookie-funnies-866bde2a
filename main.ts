@@ -9,7 +9,7 @@ const chars = [...LINE].length;
 if (chars < 1 || chars > 120) {
   throw new Error(`fortune line must be 1-120 characters, got ${chars}`);
 }
-if (LINE.trim() !== LINE || LINE.includes("\n")) {
+if (LINE.trim() !== LINE || LINE.includes("\n") || LINE.includes("\r")) {
   throw new Error("fortune line must be a single line with no surrounding whitespace");
 }
 
